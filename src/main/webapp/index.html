@@ -3,8 +3,73 @@
     <head>
         <title>Start Page</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="recursos/faw/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="recursos/css/bootstrap.min.css"/>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <div class="container">
+            <h1>Productos</h1>
+            <hr>
+            <button class="btn btn-success" onclick="agregar()">Add</button>
+            <table class="table" id="tablita">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col" colspan="2">Accion</th>
+                    </tr>
+                </thead>  
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo Producto</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Categoria:</label>
+                                <select name="categoria" id="categoria" class="form-control">
+                                    <option value="0">Seleccionar Categoria</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Producto:</label>
+                                <input type="text" class="form-control" id="producto">
+                                <input type="hidden" id="id" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Precio:</label>
+                                <input type="text" class="form-control" id="precio">
+                            </div><!-- comment -->
+                             <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Cantidad:</label>
+                                <input type="text" class="form-control" id="cantidad">
+                            </div><!-- comment -->
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="limpiar()">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="add()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="recursos/js/jquery-3.3.1.min.js"></script>
+        <script src="recursos/js/bootstrap.min.js"></script>
+        <script src="recursos/js/bootbox.min.js"></script>
+        <script src="recursos/js/categoria.js"></script>
+        <script src="recursos/js/producto.js"></script>
     </body>
 </html>

@@ -121,10 +121,10 @@ public class ProductoDaoImpl implements Metodos<Producto>{
             while(rs.next()){
                     Map<String, Object> map = new HashMap<>();
                     map.put("idproducto", rs.getInt("idproducto"));
-                    map.put("producto", rs.getInt("producto"));
-                    map.put("precio", rs.getInt("precio"));
+                    map.put("producto", rs.getString("producto"));
+                    map.put("precio", rs.getDouble("precio"));
                     map.put("cantidad", rs.getInt("cantidad"));
-                    map.put("categoria", rs.getInt("categoria"));
+                    map.put("categoria", rs.getString("categoria"));
                     lista.add(map);
             }            
         } catch (SQLException e) {
