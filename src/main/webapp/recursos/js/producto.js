@@ -124,7 +124,7 @@ function actualizar() {
                 });
             } else {
                 bootbox.alert({
-                    message: "No se modificó la escuela " + escuela + "!",
+                    message: "No se modificó la escuela " + prod+ "!",
                     size: 'small'
                 });
                 limpiar();
